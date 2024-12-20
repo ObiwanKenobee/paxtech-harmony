@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="pt-24 pb-16 min-h-screen flex items-center bg-gradient-to-br from-white via-green-50 to-blue-50 relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(255,255,255,.07)_50%,transparent_50%)] bg-[length:4px_100%] z-0" />
@@ -17,12 +20,14 @@ export const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style={{ animationDelay: "400ms" }}>
             <Button 
+              onClick={() => navigate('/about')}
               className="bg-gradient-to-r from-paxgreen to-paxgreen-light hover:opacity-90 transition-all duration-300 text-lg px-8 py-6 group"
             >
               Learn More
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button 
+              onClick={() => navigate('/contact')}
               variant="outline" 
               className="border-paxgreen text-paxgreen hover:bg-paxgreen/10 text-lg px-8 py-6 transition-all duration-300"
             >
