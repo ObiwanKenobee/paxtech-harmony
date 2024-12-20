@@ -20,6 +20,8 @@ export default {
     extend: {
       colors: {
         border: "hsl(var(--border))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         paxgreen: {
           DEFAULT: "#4A6741",
           light: "#6B8A61",
